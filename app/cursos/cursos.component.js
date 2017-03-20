@@ -9,10 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var cursos_service_1 = require('./cursos.service');
 var CursosComponent = (function () {
-    function CursosComponent() {
+    function CursosComponent(cursosService) {
         this.nome = 'MBA Java Soa';
         this.disciplinas = ['Persistencia', 'Java Web', 'EJB 3.0', 'Responsive Design'];
+        this.disciplinas = cursosService.getDisciplinas();
     }
     CursosComponent = __decorate([
         core_1.Component({
@@ -29,9 +31,10 @@ var CursosComponent = (function () {
                 </ul>
                 `
             */
-            templateUrl: 'cursos.component.html'
+            templateUrl: 'cursos.component.html',
+            providers: [cursos_service_1.CursosService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [cursos_service_1.CursosService])
     ], CursosComponent);
     return CursosComponent;
 }());

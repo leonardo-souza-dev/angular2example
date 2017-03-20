@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CursosService } from './cursos.service';
 
 @Component({
     moduleId: module.id,
@@ -14,10 +15,15 @@ import { Component } from '@angular/core';
         </ul>
         `
     */
-    templateUrl: 'cursos.component.html'
+    templateUrl: 'cursos.component.html',
+    providers: [ CursosService ]
 })
 export class CursosComponent { 
 
     nome = 'MBA Java Soa';
     disciplinas = ['Persistencia', 'Java Web', 'EJB 3.0', 'Responsive Design'];
+
+    constructor(cursosService: CursosService){
+        this.disciplinas = cursosService.getDisciplinas();
+    }
 }
