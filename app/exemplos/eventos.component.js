@@ -17,7 +17,7 @@ var EventosComponent = (function () {
         alert('Execução de evento no Angular 2');
     };
     EventosComponent.prototype.onkeyup = function (event) {
-        this.conteudoAtual = event.target.value;
+        this.conteudoAtual = event.target["value"];
     };
     EventosComponent.prototype.onSave = function (valor) {
         this.conteudoArmazenado = valor;

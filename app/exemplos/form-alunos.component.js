@@ -13,19 +13,19 @@ var FormAlunosComponent = (function () {
     function FormAlunosComponent() {
     }
     FormAlunosComponent.prototype.onClick = function (nome, rm) {
-        if (nome.value == '' && rm.value == '') {
+        if (nome["value"] == '' && rm["value"] == '') {
             alert('Campos de Nome e RM vazios!');
             return;
         }
-        if (nome.value == '') {
+        if (nome["value"] == '') {
             alert('Campo Nome vazio!');
             return;
         }
-        if (rm.value == '') {
+        if (rm["value"] == '') {
             alert('Campo RM vazio!');
             return;
         }
-        alert('CADASTRO COM SUCESSO! \r\nNome: ' + nome.value + '\r\nRM: ' + rm.value);
+        alert('CADASTRO COM SUCESSO! \r\nNome: ' + nome["value"] + '\r\nRM: ' + rm["value"]);
     };
     FormAlunosComponent = __decorate([
         core_1.Component({

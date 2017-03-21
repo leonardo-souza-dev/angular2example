@@ -24,7 +24,7 @@ export class EventosComponent {
     }
 
     onkeyup(event: KeyboardEvent){
-        this.conteudoAtual = event.target.value;
+        this.conteudoAtual = event.target["value"];
     }
 
     onSave(valor: string){
