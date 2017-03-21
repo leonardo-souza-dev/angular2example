@@ -9,23 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var cursos_service_1 = require('./cursos.service');
-var CursosComponent = (function () {
-    function CursosComponent(cursosService) {
-        this.nome = 'MBA Java Soa';
-        this.disciplinas = [''];
-        this.disciplinas = cursosService.getDisciplinas();
+var DataBindingComponent = (function () {
+    function DataBindingComponent() {
+        this.url = "http://www.fiap.com.br";
+        this.urlImg = "http://lorempixel.com/400/200/business";
     }
-    CursosComponent = __decorate([
+    DataBindingComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'cursos-lista',
-            templateUrl: 'cursos.component.html',
-            providers: [cursos_service_1.CursosService]
+            selector: 'exemplo-data-binding',
+            templateUrl: 'data-binding.component.html'
         }), 
-        __metadata('design:paramtypes', [cursos_service_1.CursosService])
-    ], CursosComponent);
-    return CursosComponent;
+        __metadata('design:paramtypes', [])
+    ], DataBindingComponent);
+    return DataBindingComponent;
 }());
-exports.CursosComponent = CursosComponent;
-//# sourceMappingURL=cursos.component.js.map
+exports.DataBindingComponent = DataBindingComponent;
+//# sourceMappingURL=data-binding.component.js.map
