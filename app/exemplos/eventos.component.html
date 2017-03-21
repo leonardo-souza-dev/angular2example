@@ -1,0 +1,19 @@
+<section>
+    <article>
+        <h3>Event Binding</h3>
+        <div>
+            <button (click)="onClick()">Mostrar Mensagem</button>
+            <br/>
+            <input type="text" (keyup)="onkeyup($event)"
+                (keyup.enter)="onSave(campo.value)"
+                (blur)="onSave(campo.value)"
+                #campo>
+            <div>Conteúdo Atual: {{ conteudoAtual }}</div>
+            <div>Conteúdo Armazenado: {{ conteudoArmazenado }}</div>
+            <br/>
+            <span (mouseover)="onMouseSpan()"
+                  (mouseout)="onMouseSpan()"
+                  [class.destaque]="isMouseOver">Mais eventos em Angular 2</span>
+        </div>
+    </article>
+</section>

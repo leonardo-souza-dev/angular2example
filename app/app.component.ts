@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { PrimeiroExemplo } from './exemplos/primeiro-exemplo.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { DataBindingComponent } from './exemplos/data-binding.component';
+import { EventosComponent } from './exemplos/eventos.component';
 
 @Component({
     selector: 'my-app',
@@ -11,7 +12,8 @@ import { DataBindingComponent } from './exemplos/data-binding.component';
         <primeiro-exemplo></primeiro-exemplo>
         <cursos-lista></cursos-lista>
         <exemplo-data-binding></exemplo-data-binding>
+        <eventos-binding></eventos-binding>
     `,
-    directives: [ PrimeiroExemplo, CursosComponent, DataBindingComponent ]
+    directives: [ PrimeiroExemplo, CursosComponent, DataBindingComponent, EventosComponent ]
 })
 export class AppComponent { }
