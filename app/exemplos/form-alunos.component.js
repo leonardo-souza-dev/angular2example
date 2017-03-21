@@ -12,8 +12,20 @@ var core_1 = require('@angular/core');
 var FormAlunosComponent = (function () {
     function FormAlunosComponent() {
     }
-    FormAlunosComponent.prototype.onClick = function (pNome, pRm) {
-        alert('Nome: ' + pNome.value + '\r\nRM: ' + pRm.value);
+    FormAlunosComponent.prototype.onClick = function (nome, rm) {
+        if (nome.value == '' && rm.value == '') {
+            alert('Campos de Nome e RM vazios!');
+            return;
+        }
+        if (nome.value == '') {
+            alert('Campo Nome vazio!');
+            return;
+        }
+        if (rm.value == '') {
+            alert('Campo RM vazio!');
+            return;
+        }
+        alert('CADASTRO COM SUCESSO! \r\nNome: ' + nome.value + '\r\nRM: ' + rm.value);
     };
     FormAlunosComponent = __decorate([
         core_1.Component({
