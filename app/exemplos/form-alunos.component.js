@@ -9,8 +9,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var aluno_1 = require('./aluno');
 var FormAlunosComponent = (function () {
     function FormAlunosComponent() {
+        this.alunos = [];
     }
     FormAlunosComponent.prototype.onClick = function (nome, rm) {
         if (nome["value"] == '' && rm["value"] == '') {
@@ -25,7 +27,10 @@ var FormAlunosComponent = (function () {
             alert('Campo RM vazio!');
             return;
         }
+        var novoAluno = new aluno_1.Aluno(nome["value"], rm["value"]);
+        this.alunos.push(novoAluno);
         alert('CADASTRO COM SUCESSO! \r\nNome: ' + nome["value"] + '\r\nRM: ' + rm["value"]);
+        console.log(this.alunos);
     };
     FormAlunosComponent = __decorate([
         core_1.Component({
