@@ -1,0 +1,10 @@
+<h2>Star Wars Movies </h2>
+<h5>Exemplo de consumo de API</h5>
+
+<ul>  
+  <li *ngFor="let item of data; let i = index">
+    <h3>{{item.title}}</h3>
+    <h4>Diretor: {{item.director}}</h4>
+    <h5>Data de lançamento: {{item.release_date}}</h5>
+  </li>
+</ul>  

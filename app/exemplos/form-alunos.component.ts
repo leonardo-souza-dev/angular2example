@@ -30,8 +30,22 @@ export class FormAlunosComponent {
 
         this.alunos.push(novoAluno);
 
-        alert('CADASTRO COM SUCESSO! \r\nNome: ' + nome["value"] + '\r\nRM: ' + rm["value"]);
+        alert('CADASTRO COM SUCESSO! \r\nNome: ' + nome["value"] + '\r\nRM: ' + rm["value"] + 
+        '\r\n' + 'TOTAL DE ALUNOS CADASTRADOS: ' + this.alunos.length +
+        '\r\n' + 'LISTAGEM DE ALUNOS NO CONSOLE (F12)');
 
-        console.log(this.alunos);
+        console.log('');console.log('');console.log('');console.log('');console.log('');console.log('');
+        console.log('****************************');
+        console.log('**   ALUNOS CADASTRADOS');
+        console.log('****************************');
+        console.log('**');
+        for(var i = 0; i < this.alunos.length; i++){
+            console.log('**  NOME: ' + this.alunos[i].nome);
+            console.log('**  RM: ' + this.alunos[i].rm);
+            console.log('**');
+        }
+        
+        console.log('****************************');
+        
     }
 }
