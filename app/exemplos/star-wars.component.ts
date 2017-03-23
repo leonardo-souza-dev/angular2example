@@ -19,7 +19,6 @@ export class StarWarsComponent implements OnInit {
   ngOnInit() {
     this._dataService.getData().subscribe(data => {
       this.data = data.results;
-      console.log(this.data);
     });
   }
 }

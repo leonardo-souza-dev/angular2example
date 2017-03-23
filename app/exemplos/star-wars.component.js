@@ -19,7 +19,6 @@ var StarWarsComponent = (function () {
         var _this = this;
         this._dataService.getData().subscribe(function (data) {
             _this.data = data.results;
-            console.log(_this.data);
         });
     };
     StarWarsComponent = __decorate([
